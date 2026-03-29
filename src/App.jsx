@@ -4,22 +4,75 @@ import profileImage from "../Me.jpeg";
 
 const skillGroups = [
   {
-    title: "Frontend",
-    items: ["React", "Tailwind CSS", "JavaScript", "Responsive UI", "Vite"],
-  },
-  {
-    title: "Backend",
+    title: "Programming Languages",
     items: [
-      "Node.js",
-      "REST APIs",
-      "Authentication",
-      "Database Design",
-      "Java",
+      {
+        name: "Java",
+        icon: "https://skillicons.dev/icons?i=java",
+      },
+      {
+        name: "JavaScript",
+        icon: "https://skillicons.dev/icons?i=javascript",
+      },
+      {
+        name: "TypeScript",
+        icon: "https://skillicons.dev/icons?i=typescript",
+      },
+      {
+        name: "Python",
+        icon: "https://skillicons.dev/icons?i=python",
+      },
+      {
+        name: "C",
+        icon: "https://cdn.simpleicons.org/c/A8B9CC",
+      },
     ],
   },
   {
-    title: "Tools",
-    items: ["Git & GitHub", "VS Code", "Figma", "Postman", "Deployment"],
+    title: "Frontend Development",
+    items: [
+      {
+        name: "React.js",
+        icon: "https://skillicons.dev/icons?i=react",
+      },
+      {
+        name: "HTML5",
+        icon: "https://skillicons.dev/icons?i=html",
+      },
+      {
+        name: "CSS3",
+        icon: "https://skillicons.dev/icons?i=css",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "https://skillicons.dev/icons?i=tailwind",
+      },
+      {
+        name: "Bootstrap",
+        icon: "https://skillicons.dev/icons?i=bootstrap",
+      },
+      {
+        name: "Redux",
+        icon: "https://skillicons.dev/icons?i=redux",
+      },
+    ],
+  },
+  {
+    title: "Backend Development",
+    items: [
+      {
+        name: "Node.js",
+        icon: "https://skillicons.dev/icons?i=nodejs",
+      },
+      {
+        name: "Express.js",
+        icon: "https://skillicons.dev/icons?i=express",
+      },
+      {
+        name: "Flask",
+        icon: "https://skillicons.dev/icons?i=flask",
+      },
+    ],
   },
 ];
 
@@ -91,92 +144,110 @@ const App = () => {
   };
 
   const theme = isDark
-    ? {
-        page: "bg-slate-950 text-white selection:bg-sky-300 selection:text-slate-950",
-        orbOne: "bg-cyan-400/20",
-        orbTwo: "bg-fuchsia-500/15",
-        orbThree: "bg-amber-400/10",
-        pill: "border-sky-400/20 bg-sky-400/10 text-sky-200",
-        dot: "bg-sky-300",
-        eyebrow: "text-slate-400",
-        title: "text-white",
-        body: "text-slate-300",
-        primaryButton:
-          "bg-white text-slate-950 hover:-translate-y-0.5 hover:bg-sky-100",
-        secondaryButton:
-          "border border-white/15 bg-white/5 text-white hover:border-white/30 hover:bg-white/10",
-        statCard: "border-white/10 bg-white/5",
-        imageGlow: "from-sky-400/20 via-cyan-300/10 to-transparent",
-        imageWrap: "border-white/10 bg-white/5",
-        imagePanel: "from-slate-900 via-slate-800 to-slate-950",
-        focusPanel: "border-white/10 bg-slate-900/70",
-        focusLabel: "text-slate-400",
-        focusBadge: "bg-emerald-400/15 text-emerald-300",
-        sectionCard: "border-white/10 bg-white/5",
-        sectionCardStrong: "border-white/10 bg-slate-900/70",
-        sectionCardAccent:
-          "border-white/10 bg-gradient-to-br from-sky-500/15 to-cyan-400/5",
-        sectionLead: "text-slate-400",
-        chip: "border-white/10 bg-slate-900/80 text-slate-200",
-        projectCard:
-          "border-white/10 bg-slate-900/80 hover:-translate-y-1 hover:border-sky-300/30",
-        projectVisual: "from-sky-400/25 via-cyan-200/10 to-fuchsia-400/20",
-        projectInner: "border-white/10 bg-black/20",
-        projectMeta: "text-slate-200",
-        projectBadge: "bg-white/10 text-white",
-        tag: "bg-white/5 text-sky-200",
-        contactWrap:
-          "border-white/10 bg-gradient-to-br from-sky-400/15 via-slate-900 to-slate-950",
-        contactCard: "border-white/10 bg-white/10 text-white hover:bg-white/15",
-        contactCardAlt:
-          "border-white/10 bg-white/5 text-white hover:bg-white/10",
-      }
-    : {
-        page: "bg-slate-100 text-slate-950 selection:bg-slate-950 selection:text-white",
-        orbOne: "bg-sky-300/30",
-        orbTwo: "bg-fuchsia-300/20",
-        orbThree: "bg-amber-300/20",
-        pill: "border-sky-500/20 bg-sky-500/10 text-sky-700",
-        dot: "bg-sky-600",
-        eyebrow: "text-slate-500",
-        title: "text-slate-950",
-        body: "text-slate-700",
-        primaryButton:
-          "bg-slate-950 text-white hover:-translate-y-0.5 hover:bg-slate-800",
-        secondaryButton:
-          "border border-slate-300 bg-white/70 text-slate-900 hover:border-slate-400 hover:bg-white",
-        statCard: "border-slate-200 bg-white/80",
-        imageGlow: "from-sky-300/30 via-cyan-200/20 to-transparent",
-        imageWrap: "border-slate-200 bg-white/80",
-        imagePanel: "from-slate-200 via-white to-slate-100",
-        focusPanel: "border-slate-200 bg-white/85",
-        focusLabel: "text-slate-500",
-        focusBadge: "bg-emerald-100 text-emerald-700",
-        sectionCard: "border-slate-200 bg-white/80",
-        sectionCardStrong: "border-slate-200 bg-white/90",
-        sectionCardAccent:
-          "border-slate-200 bg-gradient-to-br from-sky-100 to-cyan-50",
-        sectionLead: "text-slate-600",
-        chip: "border-slate-200 bg-slate-100 text-slate-700",
-        projectCard:
-          "border-slate-200 bg-white/85 hover:-translate-y-1 hover:border-sky-400/40",
-        projectVisual: "from-sky-200/80 via-cyan-100/80 to-fuchsia-100/70",
-        projectInner: "border-slate-200 bg-white/50",
-        projectMeta: "text-slate-700",
-        projectBadge: "bg-slate-900 text-white",
-        tag: "bg-slate-100 text-sky-700",
-        contactWrap:
-          "border-slate-200 bg-gradient-to-br from-sky-100 via-white to-slate-100",
-        contactCard:
-          "border-slate-200 bg-white/90 text-slate-900 hover:bg-white",
-        contactCardAlt:
-          "border-slate-200 bg-white/75 text-slate-900 hover:bg-white",
-      };
+      ? {
+          page: "bg-[#000000] text-white selection:bg-white selection:text-black",
+          mesh: "bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_26%),radial-gradient(circle_at_80%_20%,_rgba(255,255,255,0.05),_transparent_22%),linear-gradient(180deg,_#000000_0%,_#000000_58%,_#050505_100%)]",
+          orbOne: "bg-white/8",
+          orbTwo: "bg-white/6",
+          orbThree: "bg-white/5",
+          pill: "border-white/15 bg-white/6 text-white",
+          dot: "bg-white",
+          eyebrow: "text-white/70",
+          title: "text-white",
+          body: "text-white/80",
+          primaryButton:
+            "bg-white text-black hover:-translate-y-0.5 hover:bg-neutral-200",
+          secondaryButton:
+            "border border-white/15 bg-white/5 text-white hover:border-white/30 hover:bg-white/10",
+          statCard:
+            "border-white/10 bg-white/[0.04] shadow-[0_18px_60px_rgba(0,0,0,0.45)]",
+          imageGlow: "from-white/10 via-white/5 to-transparent",
+          imageWrap:
+            "border-white/10 bg-white/[0.04] shadow-[0_30px_80px_rgba(0,0,0,0.85)]",
+          imagePanel: "from-neutral-900 via-black to-black",
+          focusPanel: "border-white/10 bg-black/40",
+          focusLabel: "text-white/70",
+          focusBadge: "bg-white/10 text-white",
+          sectionCard:
+            "border-white/10 bg-white/[0.04] shadow-[0_20px_70px_rgba(0,0,0,0.55)]",
+          sectionCardStrong:
+            "border-white/10 bg-[linear-gradient(180deg,rgba(20,20,20,0.9),rgba(0,0,0,0.96))]",
+          sectionCardAccent:
+            "border-white/10 bg-[linear-gradient(145deg,rgba(28,28,28,0.92),rgba(10,10,10,0.96),rgba(0,0,0,0.98))]",
+          sectionLead: "text-white/75",
+          sectionLabel: "text-white",
+          skillCount: "border-white/15 bg-white/6 text-white",
+          skillCard: "border-white/10 bg-[#050505]/95",
+          skillIconWrap:
+            "border-white/10 bg-white/5 shadow-[0_10px_30px_rgba(255,255,255,0.08)]",
+          skillBody: "text-white/75",
+          projectCard:
+            "border-white/10 bg-black/80 hover:-translate-y-1 hover:border-white/25",
+          projectVisual: "from-white/12 via-white/6 to-black",
+          projectInner: "border-white/10 bg-black/20",
+          projectMeta: "text-white/80",
+          projectBadge: "bg-white/10 text-white",
+          tag: "bg-white/5 text-white",
+          contactWrap:
+            "border-white/10 bg-[linear-gradient(135deg,rgba(28,28,28,0.92),rgba(10,10,10,0.96),rgba(0,0,0,0.99))]",
+          contactCard: "border-white/10 bg-white/10 text-white hover:bg-white/15",
+          contactCardAlt:
+            "border-white/10 bg-white/5 text-white hover:bg-white/10",
+        }
+      : {
+          page: "bg-white text-black selection:bg-black selection:text-white",
+          mesh: "bg-[radial-gradient(circle_at_top,_rgba(0,0,0,0.05),_transparent_26%),radial-gradient(circle_at_80%_20%,_rgba(0,0,0,0.04),_transparent_22%),linear-gradient(180deg,_#ffffff_0%,_#ffffff_55%,_#f5f5f5_100%)]",
+          orbOne: "bg-black/6",
+          orbTwo: "bg-black/5",
+          orbThree: "bg-black/4",
+          pill: "border-black/10 bg-black/5 text-black",
+          dot: "bg-black",
+          eyebrow: "text-neutral-500",
+          title: "text-black",
+          body: "text-neutral-700",
+          primaryButton:
+            "bg-black text-white hover:-translate-y-0.5 hover:bg-neutral-800",
+          secondaryButton:
+            "border border-black/10 bg-white text-black hover:border-black/20 hover:bg-neutral-50",
+          statCard:
+            "border-black/10 bg-white shadow-[0_18px_60px_rgba(0,0,0,0.08)]",
+          imageGlow: "from-black/10 via-black/5 to-transparent",
+          imageWrap:
+            "border-black/10 bg-white shadow-[0_30px_80px_rgba(0,0,0,0.1)]",
+          imagePanel: "from-neutral-100 via-white to-neutral-50",
+          focusPanel: "border-black/10 bg-white",
+          focusLabel: "text-neutral-500",
+          focusBadge: "bg-black text-white",
+          sectionCard:
+            "border-black/10 bg-white shadow-[0_20px_70px_rgba(0,0,0,0.08)]",
+          sectionCardStrong:
+            "border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(245,245,245,0.96))]",
+          sectionCardAccent:
+            "border-black/10 bg-[linear-gradient(145deg,rgba(250,250,250,1),rgba(255,255,255,1),rgba(240,240,240,0.95))]",
+          sectionLead: "text-neutral-600",
+          sectionLabel: "text-black",
+          skillCount: "border-black/10 bg-black/5 text-black",
+          skillCard: "border-black/10 bg-white",
+          skillIconWrap:
+            "border-black/10 bg-neutral-50 shadow-[0_10px_30px_rgba(0,0,0,0.06)]",
+          skillBody: "text-neutral-500",
+          projectCard:
+            "border-black/10 bg-white hover:-translate-y-1 hover:border-black/20",
+          projectVisual: "from-black/8 via-black/4 to-white",
+          projectInner: "border-black/10 bg-white/70",
+          projectMeta: "text-neutral-700",
+          projectBadge: "bg-black text-white",
+          tag: "bg-black/5 text-neutral-700",
+          contactWrap:
+            "border-black/10 bg-[linear-gradient(135deg,rgba(250,250,250,1),rgba(255,255,255,1),rgba(242,242,242,0.98))]",
+          contactCard: "border-black/10 bg-white text-black hover:bg-neutral-50",
+          contactCardAlt:
+            "border-black/10 bg-white text-black hover:bg-neutral-50",
+        };
 
   return (
-    <div
-      className={`min-h-screen transition-colors duration-300 ${theme.page}`}
-    >
+    <div className={`min-h-screen transition-colors duration-300 ${theme.page}`}>
+      <div className={`fixed inset-0 ${theme.mesh}`} />
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div
           className={`absolute left-[-8rem] top-[-6rem] h-72 w-72 rounded-full blur-3xl ${theme.orbOne}`}
@@ -302,7 +373,9 @@ const App = () => {
             <div
               className={`rounded-[2rem] border p-8 backdrop-blur-sm ${theme.sectionCardAccent}`}
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">
+              <p
+                className={`text-sm font-semibold uppercase tracking-[0.35em] ${theme.sectionLabel}`}
+              >
                 My Approach
               </p>
               <h2
@@ -340,44 +413,41 @@ const App = () => {
         </section>
 
         <section id="skills" className="px-6 py-20 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">
-                  Skills
-                </p>
-                <h2
-                  className={`mt-3 text-3xl font-black sm:text-4xl ${theme.title}`}
-                >
-                  Tools and strengths that shape my work
-                </h2>
-              </div>
-              <p
-                className={`max-w-xl text-base leading-7 ${theme.sectionLead}`}
-              >
-                I enjoy combining technical execution with a strong visual sense
-                so every project feels refined from both a code and design
-                perspective.
+          <div className="mx-auto max-w-5xl rounded-[2.2rem] border border-white/10 bg-black px-5 py-12 sm:px-8 sm:py-16">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl">
+                Skills
+              </h2>
+              <p className="mt-4 text-base leading-7 text-white/75 sm:text-lg">
+                Practical skills built through real-world projects and
+                internships
               </p>
             </div>
 
-            <div className="grid gap-6 lg:grid-cols-3">
+            <div className="mt-12 space-y-14 sm:mt-16 sm:space-y-16">
               {skillGroups.map((group) => (
-                <div
-                  key={group.title}
-                  className={`rounded-[2rem] border p-7 backdrop-blur-sm ${theme.sectionCard}`}
-                >
-                  <h3 className={`text-xl font-bold ${theme.title}`}>
+                <div key={group.title}>
+                  <h3 className="text-center text-3xl font-black text-white sm:text-4xl">
                     {group.title}
                   </h3>
-                  <div className="mt-6 flex flex-wrap gap-3">
+                  <div className="mt-8 grid grid-cols-3 gap-x-6 gap-y-8 sm:mt-10 sm:gap-x-12 sm:gap-y-10">
                     {group.items.map((item) => (
-                      <span
-                        key={item}
-                        className={`rounded-full border px-4 py-2 text-sm font-medium ${theme.chip}`}
+                      <div
+                        key={item.name}
+                        className="flex flex-col items-center text-center"
                       >
-                        {item}
-                      </span>
+                        <div className="flex h-20 w-20 items-center justify-center sm:h-24 sm:w-24">
+                          <img
+                            src={item.icon}
+                            alt={`${item.name} logo`}
+                            className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+                            loading="lazy"
+                          />
+                        </div>
+                        <p className="mt-2 text-sm font-semibold text-white sm:text-base">
+                          {item.name}
+                        </p>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -389,7 +459,9 @@ const App = () => {
         <section id="projects" className="px-6 py-20 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl">
             <div className="mb-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">
+              <p
+                className={`text-sm font-semibold uppercase tracking-[0.35em] ${theme.sectionLabel}`}
+              >
                 Projects
               </p>
               <h2
@@ -450,7 +522,9 @@ const App = () => {
         <section id="experience" className="px-6 py-20 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl">
             <div className="mb-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">
+              <p
+                className={`text-sm font-semibold uppercase tracking-[0.35em] ${theme.sectionLabel}`}
+              >
                 Experience
               </p>
               <h2
@@ -466,7 +540,9 @@ const App = () => {
                   key={item.title}
                   className={`grid gap-4 rounded-[2rem] border p-7 md:grid-cols-[180px_1fr] ${theme.sectionCard}`}
                 >
-                  <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+                  <div
+                    className={`text-sm font-semibold uppercase tracking-[0.2em] ${theme.sectionLabel}`}
+                  >
                     {item.period}
                   </div>
                   <div>
@@ -489,7 +565,9 @@ const App = () => {
           >
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">
+                <p
+                  className={`text-sm font-semibold uppercase tracking-[0.35em] ${theme.sectionLabel}`}
+                >
                   Contact
                 </p>
                 <h2
