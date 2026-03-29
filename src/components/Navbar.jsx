@@ -118,6 +118,12 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
                 className="h-5 w-5"
               >
                 {isDark ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"
+                  />
+                ) : (
                   <>
                     <circle cx="12" cy="12" r="4" />
                     <path
@@ -125,12 +131,6 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
                       d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"
                     />
                   </>
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"
-                  />
                 )}
               </svg>
             </button>
@@ -146,7 +146,11 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
             </a>
             <a
               href="#projects"
-              className="rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white shadow-[0_12px_35px_rgba(0,0,0,0.35)] transition duration-300 hover:scale-[1.03] hover:bg-neutral-800"
+              className={`rounded-full px-5 py-2.5 text-sm font-semibold shadow-[0_12px_35px_rgba(0,0,0,0.18)] transition duration-300 hover:scale-[1.03] ${
+                isDark
+                  ? 'bg-cyan-400 text-slate-950 hover:bg-cyan-300'
+                  : 'bg-slate-950 text-white hover:bg-slate-800'
+              }`}
             >
               View Work
             </a>
@@ -208,6 +212,12 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
                   className={`h-5 w-5 ${isDark ? 'text-white' : 'text-black'}`}
                 >
                   {isDark ? (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"
+                    />
+                  ) : (
                     <>
                       <circle cx="12" cy="12" r="4" />
                       <path
@@ -215,12 +225,6 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
                         d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"
                       />
                     </>
-                  ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"
-                    />
                   )}
                 </svg>
                 <span>{isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
@@ -242,7 +246,11 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
               <a
                 href="#projects"
                 onClick={() => setMenuOpen(false)}
-                className="mt-2 rounded-2xl bg-black px-4 py-3 text-center text-sm font-semibold text-white hover:bg-neutral-800"
+                className={`mt-2 rounded-2xl px-4 py-3 text-center text-sm font-semibold ${
+                  isDark
+                    ? 'bg-cyan-400 text-slate-950 hover:bg-cyan-300'
+                    : 'bg-slate-950 text-white hover:bg-slate-800'
+                }`}
               >
                 Explore Portfolio
               </a>
