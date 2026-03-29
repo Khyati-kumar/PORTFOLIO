@@ -266,23 +266,23 @@ const App = () => {
         profileImage={profileImage}
       />
 
-      <main className="relative pt-28">
-        <section id="home" className="px-6 pb-20 pt-10 sm:px-8 lg:px-12">
-          <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative mx-auto w-full max-w-md">
+      <main className="relative pt-24 sm:pt-28">
+        <section id="home" className="px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10 lg:px-12">
+          <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+            <div className="order-1 relative mx-auto w-full max-w-sm sm:max-w-md">
               <div
                 className={`absolute inset-0 rounded-[2.5rem] bg-gradient-to-br blur-3xl ${theme.imageGlow}`}
               />
               <div
-                className={`relative overflow-hidden rounded-[2.5rem] border p-4 shadow-2xl backdrop-blur-xl ${theme.imageWrap}`}
+                className={`relative overflow-hidden rounded-[2rem] border p-3 shadow-2xl backdrop-blur-xl sm:rounded-[2.5rem] sm:p-4 ${theme.imageWrap}`}
               >
                 <div
-                  className={`rounded-[2rem] bg-gradient-to-br p-4 ${theme.imagePanel}`}
+                  className={`rounded-[1.6rem] bg-gradient-to-br p-3 sm:rounded-[2rem] sm:p-4 ${theme.imagePanel}`}
                 >
                   <img
                     src={profileImage}
                     alt="Maruvada Khyati Kumar portrait"
-                    className="h-[520px] w-full rounded-[1.6rem] object-cover object-top"
+                    className="h-[360px] w-full rounded-[1.25rem] object-cover object-top sm:h-[520px] sm:rounded-[1.6rem]"
                   />
                 </div>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -308,9 +308,9 @@ const App = () => {
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="order-2 space-y-6 text-center sm:space-y-8 lg:text-left">
               <div
-                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium ${theme.pill}`}
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium sm:text-sm ${theme.pill}`}
               >
                 <span className={`h-2 w-2 rounded-full ${theme.dot}`} />
                 About me
@@ -318,17 +318,17 @@ const App = () => {
 
               <div className="space-y-5">
                 <p
-                  className={`text-sm uppercase tracking-[0.4em] ${theme.eyebrow}`}
+                  className={`text-xs uppercase tracking-[0.35em] sm:text-sm sm:tracking-[0.4em] ${theme.eyebrow}`}
                 >
                   Maruvada Khyati Kumar
                 </p>
                 <h2
-                  className={`max-w-3xl text-4xl font-black leading-tight sm:text-5xl ${theme.title}`}
+                  className={`mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-5xl lg:mx-0 ${theme.title}`}
                 >
                   I design and build portfolio experiences that feel stylish,
                   modern, and deeply personal.
                 </h2>
-                <p className={`max-w-2xl text-lg leading-8 ${theme.body}`}>
+                <p className={`mx-auto max-w-2xl text-base leading-7 sm:text-lg sm:leading-8 lg:mx-0 ${theme.body}`}>
                   I enjoy turning ideas into polished interfaces with clean
                   structure, rich visuals, and thoughtful details. My goal is to
                   create web experiences that instantly feel professional and
@@ -336,7 +336,7 @@ const App = () => {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
                 <a
                   href="#projects"
                   className={`rounded-full px-6 py-3.5 text-sm font-bold transition duration-200 ${theme.primaryButton}`}
@@ -351,11 +351,11 @@ const App = () => {
                 </a>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">
                 {highlights.map((item) => (
                   <div
                     key={item.label}
-                    className={`rounded-3xl border p-5 backdrop-blur-sm ${theme.statCard}`}
+                    className={`rounded-3xl border p-4 backdrop-blur-sm sm:p-5 ${theme.statCard}`}
                   >
                     <p className={`text-3xl font-black ${theme.title}`}>
                       {item.value}
@@ -368,10 +368,10 @@ const App = () => {
           </div>
         </section>
 
-        <section id="about" className="px-6 py-20 sm:px-8 lg:px-12">
-          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <section id="about" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-12">
+          <div className="mx-auto grid max-w-7xl gap-6 sm:gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div
-              className={`rounded-[2rem] border p-8 backdrop-blur-sm ${theme.sectionCardAccent}`}
+              className={`rounded-[1.75rem] border p-6 backdrop-blur-sm sm:rounded-[2rem] sm:p-8 ${theme.sectionCardAccent}`}
             >
               <p
                 className={`text-sm font-semibold uppercase tracking-[0.35em] ${theme.sectionLabel}`}
@@ -393,7 +393,7 @@ const App = () => {
 
             <div className="grid gap-6 md:grid-cols-2">
               <div
-                className={`rounded-[2rem] border p-8 ${theme.sectionCardStrong}`}
+                className={`rounded-[1.75rem] border p-6 sm:rounded-[2rem] sm:p-8 ${theme.sectionCardStrong}`}
               >
                 <p className={`text-base leading-8 ${theme.body}`}>
                   I like interfaces that feel elegant at first glance and stay
@@ -401,7 +401,7 @@ const App = () => {
                   should feel connected to a strong personal brand.
                 </p>
               </div>
-              <div className={`rounded-[2rem] border p-8 ${theme.sectionCard}`}>
+              <div className={`rounded-[1.75rem] border p-6 sm:rounded-[2rem] sm:p-8 ${theme.sectionCard}`}>
                 <p className={`text-base leading-8 ${theme.body}`}>
                   My portfolio style combines visual confidence with readable
                   structure, making it easier to showcase projects, skills, and
@@ -412,39 +412,39 @@ const App = () => {
           </div>
         </section>
 
-        <section id="skills" className="px-6 py-20 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-5xl rounded-[2.2rem] border border-white/10 bg-black px-5 py-12 sm:px-8 sm:py-16">
+        <section id="skills" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-12">
+          <div className="mx-auto max-w-5xl rounded-[1.8rem] border border-white/10 bg-black px-4 py-10 sm:rounded-[2.2rem] sm:px-8 sm:py-16">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl">
+              <h2 className="text-3xl font-black tracking-tight text-white sm:text-5xl">
                 Skills
               </h2>
-              <p className="mt-4 text-base leading-7 text-white/75 sm:text-lg">
+              <p className="mt-3 text-sm leading-6 text-white/75 sm:mt-4 sm:text-lg sm:leading-7">
                 Practical skills built through real-world projects and
                 internships
               </p>
             </div>
 
-            <div className="mt-12 space-y-14 sm:mt-16 sm:space-y-16">
+            <div className="mt-10 space-y-12 sm:mt-16 sm:space-y-16">
               {skillGroups.map((group) => (
                 <div key={group.title}>
-                  <h3 className="text-center text-3xl font-black text-white sm:text-4xl">
+                  <h3 className="text-center text-2xl font-black text-white sm:text-4xl">
                     {group.title}
                   </h3>
-                  <div className="mt-8 grid grid-cols-3 gap-x-6 gap-y-8 sm:mt-10 sm:gap-x-12 sm:gap-y-10">
+                  <div className="mt-7 grid grid-cols-3 gap-x-3 gap-y-7 sm:mt-10 sm:gap-x-12 sm:gap-y-10">
                     {group.items.map((item) => (
                       <div
                         key={item.name}
                         className="flex flex-col items-center text-center"
                       >
-                        <div className="flex h-20 w-20 items-center justify-center sm:h-24 sm:w-24">
+                        <div className="flex h-16 w-16 items-center justify-center sm:h-24 sm:w-24">
                           <img
                             src={item.icon}
                             alt={`${item.name} logo`}
-                            className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+                            className="h-10 w-10 object-contain sm:h-14 sm:w-14"
                             loading="lazy"
                           />
                         </div>
-                        <p className="mt-2 text-sm font-semibold text-white sm:text-base">
+                        <p className="mt-2 text-xs font-semibold text-white sm:text-base">
                           {item.name}
                         </p>
                       </div>
@@ -456,7 +456,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="projects" className="px-6 py-20 sm:px-8 lg:px-12">
+        <section id="projects" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-12">
           <div className="mx-auto max-w-7xl">
             <div className="mb-10">
               <p
@@ -471,14 +471,14 @@ const App = () => {
               </h2>
             </div>
 
-            <div className="grid gap-6 xl:grid-cols-3">
+            <div className="grid gap-5 sm:gap-6 xl:grid-cols-3">
               {projects.map((project, index) => (
                 <article
                   key={project.title}
                   className={`group overflow-hidden rounded-[2rem] border transition duration-300 ${theme.projectCard}`}
                 >
                   <div
-                    className={`h-48 bg-gradient-to-br p-6 ${theme.projectVisual}`}
+                    className={`h-40 bg-gradient-to-br p-4 sm:h-48 sm:p-6 ${theme.projectVisual}`}
                   >
                     <div
                       className={`flex h-full items-end justify-between rounded-[1.5rem] border p-5 ${theme.projectInner}`}
@@ -495,8 +495,8 @@ const App = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="space-y-5 p-7">
-                    <h3 className={`text-2xl font-bold ${theme.title}`}>
+                  <div className="space-y-4 p-5 sm:space-y-5 sm:p-7">
+                    <h3 className={`text-xl font-bold sm:text-2xl ${theme.title}`}>
                       {project.title}
                     </h3>
                     <p className={`leading-7 ${theme.body}`}>
@@ -519,7 +519,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="experience" className="px-6 py-20 sm:px-8 lg:px-12">
+        <section id="experience" className="px-4 py-16 sm:px-6 sm:py-20 lg:px-12">
           <div className="mx-auto max-w-7xl">
             <div className="mb-10">
               <p
@@ -538,7 +538,7 @@ const App = () => {
               {experiences.map((item) => (
                 <div
                   key={item.title}
-                  className={`grid gap-4 rounded-[2rem] border p-7 md:grid-cols-[180px_1fr] ${theme.sectionCard}`}
+                  className={`grid gap-4 rounded-[1.75rem] border p-5 sm:rounded-[2rem] sm:p-7 md:grid-cols-[180px_1fr] ${theme.sectionCard}`}
                 >
                   <div
                     className={`text-sm font-semibold uppercase tracking-[0.2em] ${theme.sectionLabel}`}
@@ -546,7 +546,7 @@ const App = () => {
                     {item.period}
                   </div>
                   <div>
-                    <h3 className={`text-2xl font-bold ${theme.title}`}>
+                    <h3 className={`text-xl font-bold sm:text-2xl ${theme.title}`}>
                       {item.title}
                     </h3>
                     <p className={`mt-3 max-w-3xl leading-7 ${theme.body}`}>
@@ -559,9 +559,9 @@ const App = () => {
           </div>
         </section>
 
-        <section id="contact" className="px-6 pb-24 pt-20 sm:px-8 lg:px-12">
+        <section id="contact" className="px-4 pb-20 pt-16 sm:px-6 sm:pb-24 sm:pt-20 lg:px-12">
           <div
-            className={`mx-auto max-w-7xl rounded-[2.5rem] border p-8 shadow-2xl sm:p-12 ${theme.contactWrap}`}
+            className={`mx-auto max-w-7xl rounded-[2rem] border p-6 shadow-2xl sm:rounded-[2.5rem] sm:p-12 ${theme.contactWrap}`}
           >
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
@@ -571,11 +571,11 @@ const App = () => {
                   Contact
                 </p>
                 <h2
-                  className={`mt-3 text-3xl font-black sm:text-5xl ${theme.title}`}
+                  className={`mt-3 text-2xl font-black sm:text-5xl ${theme.title}`}
                 >
                   Let&apos;s build something polished and memorable.
                 </h2>
-                <p className={`mt-5 max-w-2xl text-lg leading-8 ${theme.body}`}>
+                <p className={`mt-4 max-w-2xl text-base leading-7 sm:mt-5 sm:text-lg sm:leading-8 ${theme.body}`}>
                   If you are looking for a clean portfolio, a polished frontend,
                   or a fresh visual direction for your next project, I would
                   love to connect.

@@ -39,7 +39,7 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
   return (
     <>
       <nav
-        className={`fixed left-1/2 top-4 z-50 w-[min(1120px,calc(100%-1.5rem))] -translate-x-1/2 rounded-[28px] border transition-all duration-300 ${
+        className={`fixed left-1/2 top-3 z-50 w-[min(1120px,calc(100%-1rem))] -translate-x-1/2 rounded-[24px] border transition-all duration-300 sm:top-4 sm:w-[min(1120px,calc(100%-1.5rem))] sm:rounded-[28px] ${
           isDark
             ? isScrolled
               ? 'border-white/15 bg-black/80 shadow-[0_18px_60px_rgba(0,0,0,0.78)] backdrop-blur-xl'
@@ -49,9 +49,9 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
               : 'border-black/10 bg-white/75 backdrop-blur-xl'
         }`}
       >
-        <div className="flex items-center justify-between px-5 py-4 md:px-7">
-          <a href="#home" className="flex items-center gap-3">
-            <span className="h-11 w-11 overflow-hidden rounded-2xl ring-2 ring-white/20 shadow-[0_0_30px_rgba(255,255,255,0.08)]">
+        <div className="flex items-center justify-between px-4 py-3 sm:px-5 sm:py-4 md:px-7">
+          <a href="#home" className="flex items-center gap-2.5 sm:gap-3">
+            <span className="h-10 w-10 overflow-hidden rounded-2xl ring-2 ring-white/20 shadow-[0_0_30px_rgba(255,255,255,0.08)] sm:h-11 sm:w-11">
               <img
                 src={profileImage}
                 alt="Khyati Kumar"
@@ -60,14 +60,14 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
             </span>
             <div>
               <p
-                className={`text-[0.7rem] uppercase tracking-[0.45em] ${
+                className={`text-[0.62rem] uppercase tracking-[0.32em] sm:text-[0.7rem] sm:tracking-[0.45em] ${
                   isDark ? 'text-white/70' : 'text-neutral-600'
                 }`}
               >
                 Portfolio
               </p>
               <h1
-                className={`text-lg font-semibold tracking-wide ${
+                className={`text-sm font-semibold tracking-wide sm:text-lg ${
                   isDark ? 'text-white' : 'text-black'
                 }`}
               >
@@ -156,7 +156,7 @@ const Navbar = ({ isDark, onToggleTheme, profileImage }) => {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setMenuOpen((open) => !open)}
-            className={`inline-flex h-11 w-11 items-center justify-center rounded-2xl border transition lg:hidden ${
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-2xl border transition sm:h-11 sm:w-11 lg:hidden ${
               isDark
                 ? 'border-white/10 bg-white/5 text-white hover:bg-white/10'
                 : 'border-black/10 bg-white text-black hover:bg-neutral-100'
